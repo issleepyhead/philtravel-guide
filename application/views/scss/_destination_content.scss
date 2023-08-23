@@ -1,0 +1,148 @@
+@use 'variables' as *;
+@use 'mixins';
+
+*, *::before, *::after {
+    @include mixins.reset;
+}
+
+
+body {
+    height: $viewport-height;
+    width: $viewport-width;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+body > section {
+    padding: 1rem 2rem;
+}
+
+section > div {
+    width: $center-width;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    box-shadow: #00000029 0px 10px 36px 0px, #0000000f 0px 0px 0px 1px;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 3rem 0 !important;
+    & .desc {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin: 0 auto;
+        
+    }
+
+    & .desc form {
+        display: flex;
+        justify-items: flex-end;
+    }
+
+    & .desc form input {
+        display: inline;
+        padding: .5rem 1rem;
+        font-weight: lighter;
+        color: $primary-white;
+        border-radius: 3px;
+        &:hover {
+            color: #ffa500;
+        }
+    }
+    
+    & .desc h2 {
+        text-align: center;
+
+        &::after {
+            display: block;
+            content: '';
+            width: 50%;
+            margin: .8rem auto 0;
+            border-bottom: 1px solid #afafaf;
+        }
+    }
+
+    & .desc p {
+        display: block;
+        display: -webkit-box;
+        height:78px;
+        margin: 0 auto;
+        text-indent: 2rem;
+        text-align: justify;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    & img {
+        border-radius: 3px;
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
+.pagination .page-item .page-link a {
+    color: #00f;
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+    #contents {
+        width: 90%;
+        padding: 0 !important;
+    }
+    .content-box {
+        & h2 {
+            font-size: 1.3rem;
+            &::after {
+                margin: .5rem auto 0;
+            }
+        }
+
+        & p {
+            font-size: .8rem;
+            -webkit-line-clamp: 4 !important;
+        }
+
+        & .desc a {
+            font-size: .7rem;
+        }
+
+        & img {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .content-box {
+        & h2 {
+            font-size: 1.3rem;
+            &::after {
+                margin: .5rem auto 0;
+            }
+        }
+
+        & p {
+            font-size: .8rem;
+            -webkit-line-clamp: 4 !important;
+        }
+
+        & .desc a {
+            font-size: .7rem;
+        }
+
+        & img {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1134px) {
+}
+

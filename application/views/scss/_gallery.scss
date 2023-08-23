@@ -1,0 +1,63 @@
+@use 'variables' as *;
+
+.content-container {
+    height: $max-height;
+    width: $center-width;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: .5rem;
+    grid-template-areas:
+        "img-1 img-2 img-3 img-4"
+        "img-8 img-7 img-6 img-5"
+        "img-12 img-11 img-10 img-9"
+    ;
+    width: $max-width;
+}
+
+.gallery-container .img {
+    height: $max-height;
+    width: $max-width;
+
+}
+
+@for $i  from 1 through 12 {
+        .gallery-container img:nth-child(#{$i}) {
+            grid-area: img-#{$i};
+        } 
+}
+
+.gallery-caption {
+    text-align: center;
+    height: $max-height;
+
+    & h2 {
+        width: $max-width;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+    .gallery-caption h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .gallery-caption h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1134px) {
+    .gallery-caption h2 {
+        font-size: 1.3rem;
+    }
+}
+

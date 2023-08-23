@@ -1,0 +1,102 @@
+@use 'variables' as *;
+
+.footer-container {
+    width: $center-width;
+    margin: 0 auto;
+}
+
+.boxes {
+    font-weight: lighter;
+    & div {
+        width: 33.3%;
+    }
+    & div:nth-child(1) {
+        padding: .5rem;
+        & h5 {
+            font-size: 1.3rem;
+        }
+
+        & p {
+            font-size: .8rem;
+            font-weight: lighter;
+        }
+    }
+
+    & div:nth-child(2) {
+        padding: .5rem 1.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        & span {
+            display: block;
+            width: 50%;
+            &:hover {
+                color: orangered;
+            }
+        }
+
+        & span a {
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+                color: orangered;
+            }
+        }
+    }
+}
+span a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        color: orangered;
+    }
+}
+.bottom-view {
+
+    & section {
+        padding: 0;
+    }
+
+    & .b-c {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    & .b-c span{
+        display: block;
+    }
+    
+    & section a {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+    }
+
+    & section a i {
+        display: block;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .boxes {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+    .bottom-view section {
+        padding: 1rem 0;
+    }
+    .boxes {
+        display: none !important;
+    }
+    
+    .b-c {
+        flex-direction: column;
+        text-align: center;
+    }
+}

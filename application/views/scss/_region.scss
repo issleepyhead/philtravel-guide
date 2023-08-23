@@ -1,0 +1,163 @@
+@use 'variables' as *;
+@use 'mixins';
+
+*, *::before, *::after {
+    @include mixins.reset;
+}
+
+body {
+    height: $viewport-height;
+    width: $viewport-width;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+body section {
+    padding: 1rem 2rem;
+}
+
+section > div {
+    width: $center-width;
+}
+
+.regions {
+    box-shadow: #00000029 0px 10px 36px 0px, #0000000f 0px 0px 0px 1px;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    width: 100%;
+
+    & .reg-c > div {
+        display: flex;
+        width: 50%;
+        margin: .5rem auto;
+        justify-content: space-evenly;
+    }
+
+    & .reg-c div span {
+        text-align: center;
+        width: 75px;
+        font-size: .6rem;
+        align-items: center;
+        border: 1px solid #b6b6b6;
+        text-transform: uppercase;
+
+        &:hover {
+            background: #d6d6d6cc;
+        }
+    }
+
+    & .reg-c div span a {
+        color: $primary-dark;
+        text-decoration: none;
+
+    }
+}
+
+.content-box {
+    margin: 1rem 0 0;
+    padding: 2rem;
+    box-shadow: #00000029 0px 10px 36px 0px, #0000000f 0px 0px 0px 1px;
+
+    & .img-c {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    & .img-w {
+        display: inline-block;
+        box-shadow: #00000029 0px 10px 36px 0px, #0000000f 0px 0px 0px 1px;
+        padding: .3rem;
+        margin: .2rem;
+    }
+
+    & .img-w img {
+        display: block;
+        margin: 0 auto;
+        height: 150px;
+    }
+
+    & .img-w form input {
+        display: block;
+        border: none;
+        background: transparent;
+        margin: 0 auto;
+        margin-top: 1rem;
+        padding: 0 .5rem .5rem;
+        text-align: center;
+        text-transform: uppercase;
+        
+    }
+}
+
+
+@media screen and (min-width: 670px) and (max-width: 821px) {
+    body section {
+        padding: 0;
+    }
+    section > div {
+        width: 100%;
+    }
+    .img-c {
+        grid-template-columns: 1fr 1fr !important;
+
+    }
+
+    .img-w img {
+        height: 100px !important;
+    }
+
+    .reg-c div:nth-child(2) {
+        width: 100%;
+    }
+
+    .reg-c div:nth-child(3) {
+        width: 80%;
+    }
+
+    .img-w form input {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (min-width: 822px) and (max-width: 1264px) {
+    .img-c {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .img-w img {
+        width: 250px;
+    }
+
+    .reg-c div:nth-child(2) {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 669px) {
+    body section {
+        padding: 0;
+    }
+    section > div {
+        width: 100%;
+    }
+    .img-c {
+        grid-template-columns: 1fr !important;
+    }
+
+    .regions {
+        width: 100%;
+    }
+
+    .img-w img {
+        height: 150px !important;
+    }
+
+    .reg-c div:nth-child(2) {
+        width: 100%;
+    }
+
+    .reg-c div:nth-child(3) {
+        width: 80%;
+    }
+}

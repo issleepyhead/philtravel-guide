@@ -1,0 +1,11 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*, *::before, *::after {
+    @include reset;
+}
+
+.c-c {
+    width: $center-width;
+    margin: 0 auto;
+}

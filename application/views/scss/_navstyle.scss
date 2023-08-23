@@ -1,0 +1,44 @@
+@use 'variables' as *;
+.nav-wrapper {
+    width: 100vw !important;
+
+    & .nav-content {
+        width: $center-width !important;
+    }
+
+    & .navbar-brand img {
+        width: 80px;
+    }
+
+    & li {
+        padding: .5rem;
+        a {
+            opacity: 1;
+            background: none;
+            font-weight: 500;
+            color: $primary-white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+    #navbar {
+        background: $primary-dark;
+        padding: 1rem 0;
+    }
+
+    .navbar-brand img {
+        width: $small-brand-ic !important;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #navbar {
+        background: $primary-dark;
+        padding: 1rem 0;
+    }
+    .navbar-brand img {
+        width: $small-brand-ic !important;
+    }
+}

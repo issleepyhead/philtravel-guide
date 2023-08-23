@@ -1,0 +1,95 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*, *::before, *::after {
+    @include reset;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: auto;
+    grid-gap: .5rem;
+    justify-content: center;
+    width: $center-width;
+    margin: 0 auto;
+
+    & .d-c {
+        padding: 1rem;
+    }
+
+    & .d-c img {
+        display: block;
+        height: 140px;
+        margin: 0 auto;
+        border-radius: 100%;
+    }
+
+    & .d-c p {
+        text-align: center;
+        text-transform: capitalize;
+        margin: .5rem 0;
+
+    }
+
+    & section {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    & section a {
+        display: inline-flex !important;
+        justify-content: center;
+        align-content: center;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+        margin: .2rem;
+        border-radius: 100% !important;
+    }
+
+    & section a i {
+        display: block !important;
+        justify-self: center;
+        text-align: center;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 507px) and (max-width: 768px)  {
+    main {
+        grid-template-columns: 250px 250px;
+    }
+    .d-c img {
+        height: 100px !important;
+    }
+
+    main div:nth-child(1) {
+        display: none;
+    }
+    main div:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 506px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .d-c img {
+        height: 100px !important;
+    }
+
+    main div:nth-child(1) {
+        display: none;
+    }
+    main div:nth-child(3) {
+        display: none;
+    }
+}

@@ -1,0 +1,266 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+body section {
+  padding: 1rem 2rem;
+}
+
+section > div {
+  width: 80%;
+}
+
+.regions {
+  box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 10px 36px 0px, rgba(0, 0, 0, 0.0588235294) 0px 0px 0px 1px;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+.regions .reg-c > div {
+  display: flex;
+  width: 50%;
+  margin: 0.5rem auto;
+  justify-content: space-evenly;
+}
+.regions .reg-c div span {
+  text-align: center;
+  width: 75px;
+  font-size: 0.6rem;
+  align-items: center;
+  border: 1px solid #b6b6b6;
+  text-transform: uppercase;
+}
+.regions .reg-c div span:hover {
+  background: rgba(214, 214, 214, 0.8);
+}
+.regions .reg-c div span a {
+  color: #212529;
+  text-decoration: none;
+}
+
+.content-box {
+  margin: 1rem 0 0;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 10px 36px 0px, rgba(0, 0, 0, 0.0588235294) 0px 0px 0px 1px;
+}
+.content-box .img-c {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-box .img-w {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 10px 36px 0px, rgba(0, 0, 0, 0.0588235294) 0px 0px 0px 1px;
+  padding: 0.3rem;
+  margin: 0.2rem;
+}
+.content-box .img-w img {
+  display: block;
+  margin: 0 auto;
+  height: 150px;
+}
+.content-box .img-w form input {
+  display: block;
+  border: none;
+  background: transparent;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 0 0.5rem 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 670px) and (max-width: 821px) {
+  body section {
+    padding: 0;
+  }
+  section > div {
+    width: 100%;
+  }
+  .img-c {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .img-w img {
+    height: 100px !important;
+  }
+  .reg-c div:nth-child(2) {
+    width: 100%;
+  }
+  .reg-c div:nth-child(3) {
+    width: 80%;
+  }
+  .img-w form input {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 822px) and (max-width: 1264px) {
+  .img-c {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .img-w img {
+    width: 250px;
+  }
+  .reg-c div:nth-child(2) {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 669px) {
+  body section {
+    padding: 0;
+  }
+  section > div {
+    width: 100%;
+  }
+  .img-c {
+    grid-template-columns: 1fr !important;
+  }
+  .regions {
+    width: 100%;
+  }
+  .img-w img {
+    height: 150px !important;
+  }
+  .reg-c div:nth-child(2) {
+    width: 100%;
+  }
+  .reg-c div:nth-child(3) {
+    width: 80%;
+  }
+}
+.nav-wrapper {
+  width: 100vw !important;
+}
+.nav-wrapper .nav-content {
+  width: 80% !important;
+}
+.nav-wrapper .navbar-brand img {
+  width: 80px;
+}
+.nav-wrapper li {
+  padding: 0.5rem;
+}
+.nav-wrapper li a {
+  opacity: 1;
+  background: none;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  #navbar {
+    background: #212529;
+    padding: 1rem 0;
+  }
+  .navbar-brand img {
+    width: 50px !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #navbar {
+    background: #212529;
+    padding: 1rem 0;
+  }
+  .navbar-brand img {
+    width: 50px !important;
+  }
+}
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.boxes {
+  font-weight: lighter;
+}
+.boxes div {
+  width: 33.3%;
+}
+.boxes div:nth-child(1) {
+  padding: 0.5rem;
+}
+.boxes div:nth-child(1) h5 {
+  font-size: 1.3rem;
+}
+.boxes div:nth-child(1) p {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+.boxes div:nth-child(2) {
+  padding: 0.5rem 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.boxes div:nth-child(2) span {
+  display: block;
+  width: 50%;
+}
+.boxes div:nth-child(2) span:hover {
+  color: orangered;
+}
+.boxes div:nth-child(2) span a {
+  text-decoration: none;
+  color: #fff;
+}
+.boxes div:nth-child(2) span a:hover {
+  color: orangered;
+}
+
+span a {
+  text-decoration: none;
+  color: #fff;
+}
+span a:hover {
+  color: orangered;
+}
+
+.bottom-view section {
+  padding: 0;
+}
+.bottom-view .b-c {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.bottom-view .b-c span {
+  display: block;
+}
+.bottom-view section a {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+}
+.bottom-view section a i {
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .boxes {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  .bottom-view section {
+    padding: 1rem 0;
+  }
+  .boxes {
+    display: none !important;
+  }
+  .b-c {
+    flex-direction: column;
+    text-align: center;
+  }
+}
